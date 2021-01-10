@@ -1,38 +1,61 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site may use a
- * different template.
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package radio_tech
- */
-
-get_header();
-?>
-
-	<main id="primary" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="<?php echo(get_template_directory_uri(  ).'/styles/index.css') ?>">
+	
+	<title>Ремонт побутової техніки в м. Бердичів</title>
+</head>
+<body>
+	<header class="header">
+		<div class="logo"><img src="<?php echo(get_template_directory_uri(  ).'/assets/header-logo.png') ?>" alt=""></div>
+		<nav class="nav">
+		<ul>
+			<li class="nav__item">Послуги</li>
+			<li class="nav__item">Гарантія</li>
+			<li class="nav__item">Супутникове</li>
+			<li class="nav__item">Схема проїзду</li>
+		</ul>
+		</nav>
+		<div class="contacts"><ul>
+			<li class="contacts__item">
+				<a href="tel:+380671447294" class="kyivstar">
+				+38 (067) 144-72-94
+				</a>
+			</li>
+			<li class="contacts__item">
+				<a href="tel:+380414221536" class="local">
+					+38 (04142) 2-15-36
+				</a>
+			</li>
+		</ul></div>
+	</header>
+	<div class="hero-container">
+		<div class="company">
+			ТОВ "Побутрадіотехніка"
+		</div>
+		<h1 class="heading">
+			Ремонт
+			<span>
+				телевізорів <br>
+				холодильників <br>
+				пральних машин <br>
+				мікрохвильових печей <br>
+			</span>
+			<span>
+				в Бердичеві <br>
+				та Бердичівському районі
+			</span>
+		</h1>
+		<div class="cta-buttons">
+			<button class="btn btn-primary">
+				Залишити заявку
+			</button>
+			<button class="btn btn-light">
+				Подивитись схему проїзду
+			</button>
+		</div>
+	</div>
+</body>
+</html>

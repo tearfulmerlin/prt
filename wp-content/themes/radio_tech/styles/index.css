@@ -1,0 +1,63 @@
+:root {
+    /* colors */
+    --light-text-color: #f2f2f2;
+    --dark-text-color: #4A4A4A;
+    --primary-accent-color: #EB5757;
+    --primary-accent-text-color: #FAFAFA;
+    --secndary-accent-color: #6FCF97;
+    --secndary-accent-text-color: #333333;
+    --light-accent-color: rgba(255, 255, 255, 0.72);
+    --light-accent-text-color: var(--dark-text-color);
+    /* paddings */
+    --default-container-padding: 40px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background-color: transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-accent-color);
+    color: var(--primary-accent-text-color)
+}
+
+.btn-light {
+    background-color: var(--light-accent-color);
+    color: var(--light-accent-text-color);
+}
+
+.header {
+    display: flex;
+}
+
+.nav ul,
+.contacts ul {
+    list-style: none;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.contacts__item a {
+    text-decoration: none;
+    color: unset;
+}
+
+.hero-container {
+    padding: var(--default-container-padding);
+    background-image: url(../assets/bg-image.jpg);
+    background-size: cover;
+    color: var(--light-text-color)
+}
